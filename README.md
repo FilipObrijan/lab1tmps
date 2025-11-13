@@ -1,6 +1,6 @@
 # Creational Design Patterns
 
-**Author:** Vladlen Mitu, FAF-232
+**Author:** Obrijan Filip, FAF-232
 
 ---
 

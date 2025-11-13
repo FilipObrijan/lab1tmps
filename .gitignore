@@ -6,16 +6,13 @@
 *.war
 *.ear
 
-# IDE files
 .idea/
 *.iml
 .vscode/
 
-# OS files
 .DS_Store
 Thumbs.db
 
-# Build directories
 out/
 target/
 build/
