@@ -1,36 +1,28 @@
-import domain.models.*;
-import domain.enums.*;
-import patterns.singleton.RestaurantConfig;
-import patterns.factory.MenuItemFactory;
-import patterns.factory.PaymentFactory;
+import domain.enums.MealSize;
+import domain.enums.MenuItemCategory;
+import domain.enums.OrderType;
+import domain.models.Meal;
+import domain.models.MenuItem;
+import domain.models.Order;
+import domain.models.Payment;
 import patterns.builder.MealBuilder;
 import patterns.builder.OrderBuilder;
+import patterns.factory.MenuItemFactory;
+import patterns.factory.PaymentFactory;
+import patterns.singleton.RestaurantConfig;
 
-/**
- * TMPS Laboratory Work #2 - Creational Design Patterns
- *
- * Domain: Restaurant Management System
- *
- * Implemented Patterns:
- * 1. SINGLETON - RestaurantConfig (single instance of restaurant configuration)
- * 2. FACTORY METHOD - MenuItemFactory & PaymentFactory (creates different types of objects)
- * 3. BUILDER - MealBuilder & OrderBuilder (constructs complex objects step by step)
- */
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("╔══════════════════════════════════════════════════════════╗");
-        System.out.println("║   TMPS Lab #2 - Creational Design Patterns Demo        ║");
-        System.out.println("║   Restaurant Management System: TMPS Pizza              ║");
-        System.out.println("╚══════════════════════════════════════════════════════════╝\n");
+        System.out.println("==========================================================");
+        System.out.println("  TMPS Lab #2 - Creational Design Patterns Demo");
+        System.out.println("  Restaurant Management System: TMPS Pizza");
+        System.out.println("==========================================================\n");
 
-        // ========================================
-        // PATTERN 1: SINGLETON
-        // ========================================
-        System.out.println("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("\n----------------------------------------------------------");
         System.out.println("   PATTERN 1: SINGLETON");
-        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+        System.out.println("----------------------------------------------------------\n");
 
-        // Get restaurant configuration (Singleton)
         RestaurantConfig config = RestaurantConfig.getInstance();
         System.out.println(config);
 
@@ -38,12 +30,10 @@ public class Main {
         RestaurantConfig config2 = RestaurantConfig.getInstance();
         System.out.println("\nVerifying Singleton: config == config2? " + (config == config2));
 
-        // ========================================
-        // PATTERN 2: FACTORY METHOD
-        // ========================================
-        System.out.println("\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+
+        System.out.println("\n\n----------------------------------------------------------");
         System.out.println("   PATTERN 2: FACTORY METHOD");
-        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+        System.out.println("----------------------------------------------------------\n");
 
         // Display menu
         MenuItemFactory.displayMenu();
@@ -51,32 +41,30 @@ public class Main {
         // Create menu items using Factory
         System.out.println("Creating menu items using Factory Pattern:\n");
         MenuItem bruschetta = MenuItemFactory.createMenuItem(MenuItemCategory.APPETIZER, "Bruschetta");
-        System.out.println("✓ Created: " + bruschetta);
+        System.out.println("Created: " + bruschetta);
 
         MenuItem margherita = MenuItemFactory.createMenuItem(MenuItemCategory.MAIN_COURSE, "Margherita");
-        System.out.println("✓ Created: " + margherita);
+        System.out.println("Created: " + margherita);
 
         MenuItem tiramisu = MenuItemFactory.createMenuItem(MenuItemCategory.DESSERT, "Tiramisu");
-        System.out.println("✓ Created: " + tiramisu);
+        System.out.println("Created: " + tiramisu);
 
         MenuItem cappuccino = MenuItemFactory.createMenuItem(MenuItemCategory.BEVERAGE, "Cappuccino");
-        System.out.println("✓ Created: " + cappuccino);
+        System.out.println("Created: " + cappuccino);
 
         // Create payment methods using Factory
         System.out.println("\nCreating payment methods using Factory Pattern:\n");
         Payment cashPayment = PaymentFactory.createCashPayment(100.0);
-        System.out.println("✓ Created: " + cashPayment.getPaymentDetails());
+        System.out.println("Created: " + cashPayment.getPaymentDetails());
 
         Payment creditCard = PaymentFactory.createCreditCardPayment(
             "1234567890123456", "John Doe", "12/26", "123");
-        System.out.println("✓ Created: " + creditCard.getPaymentDetails());
+        System.out.println("Created: " + creditCard.getPaymentDetails());
 
-        // ========================================
-        // PATTERN 3: BUILDER
-        // ========================================
-        System.out.println("\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+
+        System.out.println("\n\n----------------------------------------------------------");
         System.out.println("   PATTERN 3: BUILDER");
-        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+        System.out.println("----------------------------------------------------------\n");
 
         // Create menu items for meals
         MenuItem pepperoniPizza = MenuItemFactory.createMenuItem(MenuItemCategory.MAIN_COURSE, "Pepperoni");
@@ -107,12 +95,10 @@ public class Main {
             .build();
         System.out.println(familyMeal);
 
-        // ========================================
-        // COMPLETE ORDER EXAMPLE
-        // ========================================
-        System.out.println("\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+
+        System.out.println("\n\n----------------------------------------------------------");
         System.out.println("   COMPLETE ORDER DEMONSTRATION");
-        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+        System.out.println("----------------------------------------------------------\n");
 
         // Create additional items
         MenuItem quattroFormaggi = MenuItemFactory.createMenuItem(MenuItemCategory.MAIN_COURSE, "Quattro Formaggi");
@@ -177,12 +163,9 @@ public class Main {
         System.out.println("\nProcessing payment for Order #3:");
         order3.processPayment();
 
-        // ========================================
-        // END OF DEMONSTRATION
-        // ========================================
-        System.out.println("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("\n==========================================================");
         System.out.println("         Thank you for using TMPS Pizza!");
-        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("==========================================================");
     }
 }
 

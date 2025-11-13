@@ -1,5 +1,5 @@
 package domain.models;
-
+// credit card
 import domain.enums.PaymentType;
 
 public class CreditCardPayment implements Payment {

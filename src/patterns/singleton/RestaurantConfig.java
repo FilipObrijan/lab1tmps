@@ -48,7 +48,7 @@ public class RestaurantConfig {
             synchronized (RestaurantConfig.class) {
                 if (instance == null) {
                     instance = new RestaurantConfig();
-                    System.out.println("✓ Restaurant Configuration initialized (Singleton Pattern)");
+                    System.out.println("Restaurant Configuration initialized (Singleton Pattern)");
                 }
             }
         }

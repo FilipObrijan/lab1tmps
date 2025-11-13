@@ -1,9 +1,10 @@
 package domain.models;
 
-import domain.enums.OrderType;
-import patterns.singleton.RestaurantConfig;
 import java.util.ArrayList;
 import java.util.List;
+
+import domain.enums.OrderType;
+import patterns.singleton.RestaurantConfig;
 
 public class Order {
     private String customerName;
@@ -70,9 +71,9 @@ public class Order {
         StringBuilder sb = new StringBuilder();
         RestaurantConfig config = RestaurantConfig.getInstance();
 
-        sb.append("\n╔════════════════════════════════════════╗\n");
-        sb.append("║          ORDER RECEIPT                ║\n");
-        sb.append("╚════════════════════════════════════════╝\n");
+        sb.append("\n========================================\n");
+        sb.append("          ORDER RECEIPT\n");
+        sb.append("========================================\n");
         sb.append("Restaurant: ").append(config.getRestaurantName()).append("\n");
         sb.append("Address: ").append(config.getAddress()).append("\n");
         sb.append("Phone: ").append(config.getPhoneNumber()).append("\n");

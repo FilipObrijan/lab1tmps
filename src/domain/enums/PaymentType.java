@@ -1,5 +1,5 @@
 package domain.enums;
-
+// pay
 public enum PaymentType {
     CASH,
     CREDIT_CARD,

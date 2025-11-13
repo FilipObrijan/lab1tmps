@@ -1,12 +1,13 @@
 package patterns.builder;
 
-import domain.models.Order;
-import domain.models.MenuItem;
-import domain.models.Meal;
-import domain.models.Payment;
-import domain.enums.OrderType;
 import java.util.ArrayList;
 import java.util.List;
+
+import domain.enums.OrderType;
+import domain.models.Meal;
+import domain.models.MenuItem;
+import domain.models.Order;
+import domain.models.Payment;
 
 /**
  * BUILDER PATTERN
@@ -111,7 +112,7 @@ public class OrderBuilder {
             throw new IllegalStateException("Table number is required for dine-in orders");
         }
 
-        System.out.println("✓ Building order with Builder Pattern...");
+        System.out.println("Building order with Builder Pattern...");
         return new Order(customerName, phoneNumber, tableNumber, items, meals,
                         orderType, deliveryAddress, paymentMethod);
     }

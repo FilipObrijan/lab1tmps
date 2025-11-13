@@ -1,7 +1,11 @@
 package patterns.factory;
 
-import domain.models.*;
 import domain.enums.MenuItemCategory;
+import domain.models.Appetizer;
+import domain.models.Beverage;
+import domain.models.Dessert;
+import domain.models.MenuItem;
+import domain.models.Pizza;
 
 /**
  * FACTORY METHOD PATTERN
@@ -126,27 +130,27 @@ public class MenuItemFactory {
         System.out.println("\n========== TMPS PIZZA MENU ==========\n");
 
         System.out.println("APPETIZERS:");
-        System.out.println("  • Bruschetta - $8.99");
-        System.out.println("  • Mozzarella Sticks - $9.99");
-        System.out.println("  • Caesar Salad - $10.99");
+        System.out.println("  - Bruschetta - $8.99");
+        System.out.println("  - Mozzarella Sticks - $9.99");
+        System.out.println("  - Caesar Salad - $10.99");
 
         System.out.println("\nMAIN COURSES (Pizzas):");
-        System.out.println("  • Margherita Pizza - $12.99");
-        System.out.println("  • Pepperoni Pizza - $14.99");
-        System.out.println("  • Quattro Formaggi Pizza - $15.99");
-        System.out.println("  • Capricciosa Pizza - $16.99");
+        System.out.println("  - Margherita Pizza - $12.99");
+        System.out.println("  - Pepperoni Pizza - $14.99");
+        System.out.println("  - Quattro Formaggi Pizza - $15.99");
+        System.out.println("  - Capricciosa Pizza - $16.99");
 
         System.out.println("\nDESSERTS:");
-        System.out.println("  • Tiramisu - $7.99");
-        System.out.println("  • Panna Cotta - $6.99");
-        System.out.println("  • Chocolate Lava Cake - $8.99");
+        System.out.println("  - Tiramisu - $7.99");
+        System.out.println("  - Panna Cotta - $6.99");
+        System.out.println("  - Chocolate Lava Cake - $8.99");
 
         System.out.println("\nBEVERAGES:");
-        System.out.println("  • Espresso - $3.99");
-        System.out.println("  • Cappuccino - $4.99");
-        System.out.println("  • Coca-Cola - $2.99");
-        System.out.println("  • Sprite - $2.99");
-        System.out.println("  • Mineral Water - $1.99");
+        System.out.println("  - Espresso - $3.99");
+        System.out.println("  - Cappuccino - $4.99");
+        System.out.println("  - Coca-Cola - $2.99");
+        System.out.println("  - Sprite - $2.99");
+        System.out.println("  - Mineral Water - $1.99");
 
         System.out.println("\n======================================\n");
     }

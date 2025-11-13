@@ -1,22 +1,9 @@
 package patterns.builder;
 
+import domain.enums.MealSize;
 import domain.models.Meal;
 import domain.models.MenuItem;
-import domain.enums.MealSize;
 
-/**
- * BUILDER PATTERN
- *
- * Purpose: Constructs complex Meal objects step by step.
- * Allows creating meals with different combinations of items without having
- * a constructor with too many parameters.
- *
- * Benefits:
- * - Makes code more readable and maintainable
- * - Allows creating objects with different configurations
- * - Separates construction from representation
- * - Supports fluent interface (method chaining)
- */
 public class MealBuilder {
     private MenuItem mainItem;
     private MenuItem sideItem;
@@ -30,9 +17,6 @@ public class MealBuilder {
         this.mealSize = MealSize.REGULAR; // default size
     }
 
-    /**
-     * Builder methods return 'this' to enable method chaining
-     */
 
     public MealBuilder setMainItem(MenuItem mainItem) {
         this.mainItem = mainItem;
@@ -73,7 +57,7 @@ public class MealBuilder {
             throw new IllegalStateException("Cannot build meal without a main item");
         }
 
-        System.out.println("✓ Building meal with Builder Pattern...");
+        System.out.println("Building meal with Builder Pattern...");
         return new Meal(mainItem, sideItem, beverage, dessert, specialInstructions, mealSize);
     }
 
