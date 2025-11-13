@@ -1,5 +1,5 @@
 package domain.enums;
-
+// mealsize
 public enum MealSize {
     REGULAR,
     LARGE,

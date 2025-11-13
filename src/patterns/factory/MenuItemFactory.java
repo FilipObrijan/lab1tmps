@@ -7,18 +7,7 @@ import domain.models.Dessert;
 import domain.models.MenuItem;
 import domain.models.Pizza;
 
-/**
- * FACTORY METHOD PATTERN
- *
- * Purpose: Creates different types of menu items without exposing creation logic to the client.
- * The factory encapsulates the instantiation process and returns the appropriate MenuItem subclass.
- *
- * Benefits:
- * - Centralizes object creation logic
- * - Makes it easy to add new menu items
- * - Client code doesn't need to know about concrete classes
- * - Promotes loose coupling
- */
+
 public class MenuItemFactory {
 
     /**

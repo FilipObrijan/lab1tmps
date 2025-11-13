@@ -1,5 +1,5 @@
 package domain.models;
-
+//
 import domain.enums.MenuItemCategory;
 
 public abstract class MenuItem {

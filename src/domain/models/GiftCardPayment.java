@@ -1,5 +1,5 @@
 package domain.models;
-
+//
 import domain.enums.PaymentType;
 
 public class GiftCardPayment implements Payment {

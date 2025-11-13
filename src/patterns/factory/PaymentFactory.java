@@ -1,19 +1,12 @@
 package patterns.factory;
 
-import domain.models.*;
 import domain.enums.PaymentType;
+import domain.models.CashPayment;
+import domain.models.CreditCardPayment;
+import domain.models.GiftCardPayment;
+import domain.models.MobilePayment;
+import domain.models.Payment;
 
-/**
- * FACTORY METHOD PATTERN
- *
- * Purpose: Creates different types of payment methods without exposing creation logic.
- * Encapsulates the payment object creation process.
- *
- * Benefits:
- * - Centralizes payment method creation
- * - Easy to add new payment types
- * - Client doesn't need to know concrete payment classes
- */
 public class PaymentFactory {
 
     /**

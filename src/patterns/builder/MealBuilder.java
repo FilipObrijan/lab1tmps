@@ -14,7 +14,7 @@ public class MealBuilder {
 
     public MealBuilder() {
         // Start with empty meal
-        this.mealSize = MealSize.REGULAR; // default size
+        this.mealSize = MealSize.REGULAR; 
     }
 
 

@@ -9,18 +9,7 @@ import domain.models.MenuItem;
 import domain.models.Order;
 import domain.models.Payment;
 
-/**
- * BUILDER PATTERN
- *
- * Purpose: Constructs complex Order objects step by step.
- * Orders can have many optional fields (delivery address, table number, multiple items, etc.)
- *
- * Benefits:
- * - Handles complex object construction elegantly
- * - Makes code more readable
- * - Supports fluent interface
- * - Validates data before building the final object
- */
+
 public class OrderBuilder {
     private String customerName;
     private String phoneNumber;

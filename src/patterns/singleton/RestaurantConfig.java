@@ -1,17 +1,6 @@
 package patterns.singleton;
 
-/**
- * SINGLETON PATTERN
- *
- * Purpose: Ensures only one instance of RestaurantConfig exists throughout the application.
- * This class manages global restaurant settings like name, address, tax rate, etc.
- *
- * Key Features:
- * - Private constructor to prevent direct instantiation
- * - Static instance variable to hold the single instance
- * - Public static method to access the instance
- * - Thread-safe implementation
- */
+
 public class RestaurantConfig {
     // Single instance of the class
     private static RestaurantConfig instance;
